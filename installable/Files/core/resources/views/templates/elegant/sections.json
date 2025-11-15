@@ -1,0 +1,379 @@
+{
+    "room_suite_menu": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Rooms  & Suites Menu",
+        "content": {
+            "short_description": "textarea"
+        }
+    },
+    "banner": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Banner Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "1920x945"
+                }
+            },
+            "heading": "text",
+            "subheading": "text",
+            "select": {
+                "name": "review",
+                "options": {
+                    "1": "One",
+                    "2": "Two",
+                    "3": "Three",
+                    "4": "Four",
+                    "5": "Five"
+                }
+            },
+            "review_short_comment": "text",
+            "review_text": "text",
+            "reviews_company_name": "text"
+        }
+    },
+    "breadcrumb_images": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Breadcrumb Images",
+        "content": {
+            "images": {
+                "breadcrumb_image": {
+                    "size": "1920x365"
+                },
+                "blog_breadcrumb_image": {
+                    "size": "1920x570"
+                },
+                "room_detail_breadcrumb_image": {
+                    "size": "1920x570"
+                }
+            }
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "395x505"
+                }
+            },
+            "heading": "text",
+            "email_address": "text",
+            "contact_number": "text",
+            "address": "text"
+        }
+    },
+    "location": {
+        "builder": true,
+        "name": "Location Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "map_embed_link": "text"
+        }
+    },
+    "booking_advantage": {
+        "builder": true,
+        "name": "Booking Advantages",
+        "content": {
+            "heading": "text"
+        },
+        "element": {
+            "images": {
+                "icon": {
+                    "size": "30x30"
+                }
+            },
+            "advantage": "text",
+            "modal": true
+        }
+    },
+    "about": {
+        "builder": true,
+        "name": "About Us",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "description": "textarea-nic"
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "380x520"
+                }
+            },
+            "modal": true
+        }
+    },
+    "featured_rooms": {
+        "builder": true,
+        "name": "Featured Rooms",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "facility": {
+        "builder": true,
+        "name": "Facility Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "630x570"
+                }
+            },
+            "title": "text",
+            "description": "textarea",
+            "modal": true
+        }
+    },
+    "hotel_overview": {
+        "builder": true,
+        "name": "Hotel Overview Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "1100x575"
+                }
+            },
+            "description": "text",
+            "modal": true
+        }
+    },
+    "testimonial": {
+        "builder": true,
+        "name": "Testimonial Section",
+        "content": {
+            "images": {
+                "background_image": {
+                    "size": "1920x560"
+                }
+            }
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "100x100"
+                }
+            },
+            "name": "text",
+            "select": {
+                "name": "rating",
+                "options": {
+                    "1": "One",
+                    "2": "Two",
+                    "3": "Three",
+                    "4": "Four",
+                    "5": "Five"
+                }
+            },
+            "feedback": "textarea",
+            "modal": false
+        }
+    },
+    "faq": {
+        "builder": true,
+        "name": "FAQ Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "question": "text",
+            "answer": "textarea",
+            "modal": true
+        }
+    },
+    "policy_pages": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "slug": "title",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+    "blog": {
+        "builder": true,
+        "name": "Blog Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "images": {
+                "image": {
+                    "size": "860x600",
+                    "thumb": "430x300"
+                }
+            },
+            "title": "text",
+            "slug": "title",
+            "category": "text",
+            "read_time": "text",
+            "description": "textarea-nic",
+            "modal": false,
+            "seo": true
+        }
+    },
+    "offer": {
+        "builder": true,
+        "name": "Offer Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+
+    "offer_section_two": {
+        "builder": true,
+        "name": "Offer Section Two",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        }
+    },
+    "subscribe": {
+        "builder": true,
+        "name": "Subscribe Section",
+        "content": {
+            "images": {
+                "background": {
+                    "size": "1920x365"
+                }
+            },
+            "heading": "text",
+            "policy_text": "text",
+            "button_text": "text"
+        }
+    },
+    "login": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Login Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "420x535"
+                }
+            },
+            "heading": "text"
+        }
+    },
+    "register": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Register Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "420x535"
+                }
+            },
+            "heading": "text"
+        }
+    },
+    "dining": {
+        "builder": true,
+        "no_selection": false,
+        "name": "Dining Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "1300x540"
+                }
+            },
+            "heading": "text",
+            "description": "textarea"
+        }
+    },
+    "acknowledgement": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Acknowledgement",
+        "content": {
+            "title": "text",
+            "details": "textarea"
+        }
+    },
+    "banned_page": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Banned Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "700x400"
+                }
+            },
+            "heading": "text"
+        }
+    },
+    "gallery": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Image Gallery Page",
+        "element": {
+            "images": {
+                "image": {
+                    "size": ""
+                }
+            },
+            "modal": true
+        }
+    },
+    "video": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Video Gallery Page",
+        "element": {
+            "images": {
+                "image": {
+                    "size": "645x365"
+                }
+            },
+            "youtube_link": "text",
+            "modal": true
+        }
+    },
+    "confirmation_page": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Confirmation Page",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "295x375"
+                }
+            },
+            "heading":"text",
+            "advise":"text"
+        }
+    },
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "title": "text",
+            "social_icon": "icon",
+            "url": "text",
+            "modal": true
+        }
+    }
+}
