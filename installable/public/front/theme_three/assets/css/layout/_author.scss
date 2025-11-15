@@ -1,0 +1,30 @@
+/* -----------------------------------------
+    Author CSS
+----------------------------------------- */
+.author-area {
+    position: relative;
+    overflow: hidden;
+
+    .card {
+        &.card-center{
+            align-items: center;
+            text-align: center;
+        }
+        .card-img{
+            max-width: 80px;
+            box-shadow: 0 10px 30px -7px rgba(var(--color-primary-rgb), 0.5);
+        }
+    }
+
+    .badge-list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        >*{
+            flex: 0 0 auto;
+            width: 25px;
+        }
+    }
+}

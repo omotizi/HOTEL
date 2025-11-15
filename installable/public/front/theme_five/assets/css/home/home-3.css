@@ -1,0 +1,36 @@
+/*   
+
+    * This file contains the styling for the Home Variation Three, this
+    is the file you need to edit to change the look of the
+    template.
+
+******************************************************
+*****************************************************/
+/* -----------------------------------------
+	Hero Banner CSS
+----------------------------------------- */
+.hero-banner.hero-banner-3 {
+  padding-top: 310px;
+  padding-bottom: 190px;
+}
+.hero-banner.hero-banner-3 .bg-shape {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  right: 0;
+  z-index: 5;
+  height: auto;
+  opacity: 1;
+}
+.hero-banner.hero-banner-3 .swiper-slide .bg-img {
+  transition: all 10s linear;
+}
+.hero-banner.hero-banner-3 .swiper-slide .banner-content {
+  opacity: 0;
+}
+.hero-banner.hero-banner-3 .swiper-slide.swiper-slide-active .bg-img {
+  transform: scale(1.4);
+}
+.hero-banner.hero-banner-3 .swiper-slide.swiper-slide-active .banner-content {
+  opacity: 1;
+}/*# sourceMappingURL=home-3.css.map */

@@ -1,0 +1,67 @@
+/* -----------------------------------------
+	Header 1 CSS
+----------------------------------------- */
+.header-area{
+    
+    &.header-1 {
+        background-color: var(--color-white);
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: calc((100vw - 960px) / 2);
+            background-color: var(--color-primary);
+            z-index: -1;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: calc(50% - .50rem);
+            left: 0;
+            right: 0;
+            width: 100%;
+            border-bottom: 1px solid var(--border-color);
+            transform: translateY(-50%);
+            z-index: -2;
+        }
+
+        .navbar-nav{
+            margin: 0;
+        }
+
+        .main-navbar {
+            .nav-item:not(.menu-dropdown .nav-item) {
+                &:first-child{
+                    margin-inline-start: 0;
+                    >.nav-link{
+                        padding-inline-start: 0;
+                    }
+                }
+                >.nav-link{
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+
+        .header-top,
+        .header-bottom {
+            padding-inline-start: 30px;
+        }
+    
+        &.is-sticky {
+            &::after{
+                display: none;
+            }
+            .header-top{
+                display: none;
+            }
+            .social-link{
+                --bg: var(--color-primary);
+            }
+        }
+    }
+}

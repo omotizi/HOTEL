@@ -1,0 +1,160 @@
+/* -----------------------------------------
+    Product CSS
+----------------------------------------- */
+.product-default {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+
+    .product-img{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        img{
+            @include transition(transform, .3s, ease-out);
+        }
+    }
+
+    .product-category {
+        font-size: var(--font-sm);
+        font-weight: var(--font-medium);
+    }
+
+    .btn-icon{
+        width: 30px;
+        height: 30px;
+        color: var(--color-primary);
+        border: 1px solid var(--border-color);
+        font-size: 12px;
+    }
+
+    .author{
+        img{
+            border-radius: 50%;
+            max-width: 30px;
+            margin-inline-end: 10px;
+        }
+    }
+
+    .product-price{
+        .old-price{
+            font-weight: normal;
+        }
+    }
+
+    .product-tag{
+        padding: 5px 10px;
+        font-size: var(--font-xsm);
+    }
+
+    .hover-show{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-primary);
+        border-color: transparent;
+        color: var(--color-white);
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .product-details{
+        position: relative;
+        max-width: calc(100% - 20px);
+        background-color: var(--color-white);
+        margin-top: -30px;
+        z-index: 2;
+        @include transition(all, .3s, ease-out);
+    }
+
+    &:hover {
+        .product-details{
+            transform: translateY(-5px);
+            border-color: transparent !important;
+            box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.1);
+        }
+
+        .product-img {
+            img {
+                transform: scale3d(1.05, 1.05, 1.05);
+            }
+        }
+
+        .btn{
+            color: var(--color-white);
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .hover-show{
+            opacity: 1;
+        }
+    }
+}
+
+.product-icon-list {
+    margin-bottom: 0;
+    font-size: var(--font-sm);
+    color: var(--color-primary);
+
+    i{
+        font-size: 16px;
+    }
+
+    span{
+        color: var(--color-medium);
+    }
+
+    li:not(:last-child) {
+        padding-inline-end: 10px;
+        margin-inline-end: 10px;
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+.product-price {
+    @include make-flex(center, start);
+    gap: 8px;
+    *{
+        margin: 0;
+    }
+    .old-price{
+        text-decoration: line-through;
+        font-weight: var(--font-semi-bold);
+        font-family: var(--font-heading);
+    }
+}
+
+.product-column {
+    .btn-icon{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .product-details {
+        padding: 15px 20px;
+        max-width: unset;
+        transform: none !important;
+        box-shadow: none !important;
+        margin: 0;
+    }
+
+    .product-list-group {
+        padding-inline-start: 16px;
+
+        li {
+            list-style-type: disc;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &:hover {
+        transform: none;
+        border-color: var(--border-color) !important;
+    }
+}

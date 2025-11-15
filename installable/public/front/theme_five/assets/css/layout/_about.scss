@@ -1,0 +1,178 @@
+/* -----------------------------------------
+    About CSS
+----------------------------------------- */
+.about-area {
+    position: relative;
+
+    .blockquote {
+        font-size: inherit;
+        padding: 20px;
+        border-radius: 0 100px 100px 0;
+        color: var(--color-dark);
+        background-color: rgba($color: var(--color-primary-rgb), $alpha: .2);
+        font-style: italic;
+    }
+
+    .card {
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .card-icon{
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+        color: var(--color-primary);
+        box-shadow: 0px 8px 20px rgba(39, 39, 39, 0.08);
+    }
+
+    .image {
+        position: relative;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+        grid-gap: 25px;
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: rgba($color: var(--color-primary-rgb), $alpha: .2);
+            font-size: 32px;
+            color: var(--color-primary);
+
+            img{
+                max-width: 30px;
+            }
+        }
+    }
+
+    $colors: (
+        "1" #004CFF,
+        "2" #F1C40F,
+        "3" #00C2FF,
+        "4" #8E44AD,
+        "5" #499C21,
+        "6" #F1C40F,
+        "7" #E67E22,
+        "8" #E74C3C,
+        "9" #FFAA85,
+        "10" #3C8CE7
+    );
+
+    @each $i, $color in $colors {
+        .grid-item:nth-child(#{$i}) {
+            background-color: rgba($color: $color, $alpha: .09);
+        }
+    }
+
+    .client{
+        @include make-flex(center, start);
+        gap: 15px;
+
+        .client-img{
+            max-width: 60px;
+        }
+    }
+}
+.about-1 {
+    .image{
+        position: relative;
+        padding-bottom: 85%;
+
+        .img-1, .img-2, .img-3 {
+            position: absolute;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .img-1 {
+            width: 60%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .img-2 {
+            width: 45%;
+            top: 5%;
+            right: 0;
+            z-index: 3;
+        }
+
+        .img-3{
+            width: 50%;
+            right: 0;
+            bottom: 0;
+            margin-inline-end: 5%;
+            z-index: 2;
+        }
+    }
+}
+.about-2{
+    .image {
+        position: relative;
+        mask: url(../images/mask-brush-1.svg) no-repeat center/contain;
+        -webkit-mask: url(../images/mask-brush-1.svg) no-repeat center/contain;
+    }
+    .clients-avatar {
+        span{
+            all: unset;
+        }
+    }
+}
+.about-3{
+    .about-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+        .grid-item{
+            margin-top: 20px;
+        }
+        .icon{
+            margin-top: -40px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            box-shadow: 0px 0px 40px rgba(103, 103, 103, 0.12);
+
+            img{
+                max-width: 35px;
+            }
+        }
+    }
+
+    .image{
+        position: relative;
+        padding-bottom: 90%;
+
+        .img-1, .img-2 {
+            position: absolute;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .img-1 {
+            width: 50%;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            mask: url(../images/mask-brush-3.svg) no-repeat center/contain;
+            -webkit-mask: url(../images/mask-brush-3.svg) no-repeat center/contain;
+        }
+        .img-2 {
+            width: 80%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+            -webkit-mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+/* -----------------------------------------
+    Choose CSS
+----------------------------------------- */
+.choose-area {
+    .image{
+        position: relative;
+        padding-bottom: 100%;
+        height: 100%;
+
+        .img-1, .img-2 {
+            position: absolute;
+            border-radius: 10px;
+            overflow: hidden;
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: var(--color-dark);
+                opacity: .3;
+                z-index: 1;
+            }
+        }
+
+        .img-2 {
+            width: 75%;
+            left: 0;
+            right: 0;
+            margin-inline-start: auto;
+        }
+        .img-1 {
+            width: 45%;
+            bottom: 0;
+            z-index: 2;
+            margin-inline-start: -5%;
+        }
+    }
+    .content{
+
+        .icon{
+            --size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 8px;
+            text-align: center;
+            background-color: rgba($color: var(--color-primary-rgb), $alpha: .2);
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+
+            img{
+                max-width: 30px;
+            }
+        }
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+            grid-gap: 25px;
+        }
+    }
+
+    $colors: (
+        "1" #004CFF,
+        "2" #F1C40F,
+        "3" #00C2FF,
+        "4" #8E44AD,
+        "5" #499C21,
+        "6" #F1C40F,
+        "7" #E67E22,
+        "8" #E74C3C,
+        "9" #FFAA85,
+        "10" #3C8CE7
+    );
+
+    @each $i, $color in $colors {
+        .grid-item:nth-child(#{$i}) {
+            .icon{
+                background-color: rgba($color: $color, $alpha: .09);
+            }
+        }
+        .item-list {
+            .item:nth-child(#{$i}) {
+                .icon{
+                    background-color: rgba($color: $color, $alpha: .09);
+                }
+            }
+        }
+
+        &.choose-3 {
+            .item-list {
+                .item:nth-child(#{$i}) {
+                    .icon{
+                        background-color: rgba($color: $color, $alpha: .15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.choose-2{
+    .image {
+        position: relative;
+        padding: 0;
+        mask: url(../images/mask-brush-2.svg) no-repeat center/contain;
+        -webkit-mask: url(../images/mask-brush-2.svg) no-repeat center/contain;
+    }
+    .icon{
+        flex: 0 0 auto;
+    }
+}
+
+.choose-3 {
+    .image{
+        position: relative;
+        padding-bottom: 100%;
+
+        .img-1, .img-2, .img-3 {
+            position: absolute;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .img-1 {
+            width: 80%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+            -webkit-mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+        }
+        .img-2 {
+            width: 30%;
+            top: 0;
+            right: 10%;
+            z-index: 2;
+        }
+        .img-3 {
+            width: 45%;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .img-2, .img-3 {
+            mask: url(../images/mask-brush-3.svg) no-repeat center/contain;
+            -webkit-mask: url(../images/mask-brush-3.svg) no-repeat center/contain;
+        }
+    }
+
+    .item-list {
+        .item {
+            .icon{
+                --size: 80px;
+                background-color: var(--color-primary);
+                mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+                -webkit-mask: url(../images/mask-brush-4.svg) no-repeat center/contain;
+            }
+        }
+    }
+}

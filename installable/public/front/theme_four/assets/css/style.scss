@@ -1,0 +1,25 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+// scss-import-stack
+// Base
+@import "base/base";
+// Layout
+@import "layout/hero-banner";
+@import "layout/about";
+@import "layout/category";
+@import "layout/product";
+@import "layout/counter";
+@import "layout/footer";
+@import "layout/banner";
+@import "layout/choose";
+@import "layout/testimonial";
+@import "layout/blog";
+// Pages
+@import url("header/header.css");
+@import url("header/header-1.css");
+@import url("header/header-2.css");
+@import url("header/header-3.css");
+@import url("home/home-1.css");
+@import url("home/home-2.css");
+@import url("home/home-3.css");

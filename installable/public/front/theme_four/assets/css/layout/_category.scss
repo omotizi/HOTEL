@@ -1,0 +1,121 @@
+/* -----------------------------------------
+    Category CSS
+----------------------------------------- */
+.category-area{
+    position: relative;
+    overflow: hidden;
+
+    .card {
+        overflow: hidden;
+        // &::before{
+        //     position: absolute;
+        //     content: '';
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     background: linear-gradient(179.93deg, rgba(255, 255, 255, 0) 0.06%, rgba(0, 0, 0, 0.72) 83.9%, rgba(0, 0, 0, 0.8) 99.94%);
+        //     z-index: 2;
+        // }
+
+        .card-img{
+            position: relative;
+            overflow: hidden;
+            img{
+                @include transition(transform, .3s, ease-out);
+            }
+        }
+
+        .card-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 15px 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            transition: all .4s;
+
+            span{
+                color: rgba($color: var(--color-white-rgb), $alpha: .9);
+            }
+        }
+
+        &:hover{
+            .card-img {
+                img {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+            }
+        }
+    }
+}
+
+.category-1{
+    .card {
+        .card-img{
+            position: relative;
+            overflow: hidden;
+            img{
+                @include transition(transform, .3s, ease-out);
+            }
+        }
+
+        .card-text {
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(7.5px);
+
+            span{
+                color: rgba($color: var(--color-white-rgb), $alpha: .9);
+            }
+        }
+
+        &:hover{
+            .card-img {
+                img {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+            }
+        }
+    }
+}
+.category-2{
+    .card {
+        z-index: 1;
+        border-radius: 10px 10px 0 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background: linear-gradient(179.94deg, rgba($color: var(--color-black-rgb), $alpha: 0) 0.06%, rgba($color: var(--color-black-rgb), $alpha: .88) 95.75%);
+        }
+        .card-img{
+            position: relative;
+            overflow: hidden;
+            img{
+                @include transition(transform, .3s, ease-out);
+            }
+        }
+
+        .card-text {
+            bottom: 0;
+            top: 0;
+        }
+
+        &:hover{
+            .card-img {
+                img {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+            }
+        }
+    }
+}

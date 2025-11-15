@@ -1,0 +1,99 @@
+/* -----------------------------------------
+    Typography CSS
+----------------------------------------- */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    font-weight: var(--font-regular);
+    color: var(--color-medium);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+    outline: 0 !important;
+    transition: all .3s ease-out;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+.color-primary {
+    a{
+        color: inherit;
+    }
+}
+:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6){
+    a{
+        color: inherit;
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+:is(h1, h2, h3, h4,h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+}
+.h1, .h2, .h3, .h4, .h5, .h6{
+    display: block;
+}
+
+h1 {
+    font-size: 62px;
+}
+
+h2, .h2 {
+    font-size: 48px;
+}
+
+h3, .h3 {
+    font-size: 32px;
+}
+h4, .h4 {
+    font-size: 24px;
+}
+h5, .h5 {
+    font-size: 20px;
+}
+h6, .h6 {
+    font-size: 16px;
+}
+
+p, .text, .card-text {
+    color: var(--color-medium);
+    line-height: 1.6;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.font-lg{
+    font-size: var(--font-lg) !important;
+}
+.font-sm{
+    font-size: var(--font-sm) !important;
+}
+.font-xsm{
+    font-size: var(--font-xsm) !important;
+}
+.font-medium{
+    font-weight: var(--font-medium);
+}
+.font-bold{
+    font-weight: var(--font-bold);
+}
+b{
+    font-weight: 500;
+    color: var(--color-dark);
+}

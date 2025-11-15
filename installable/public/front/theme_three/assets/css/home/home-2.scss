@@ -1,0 +1,37 @@
+/*   
+    
+    * This file contains the styling for the Home Variation Two, this
+    is the file you need to edit to change the look of the
+    template.
+
+******************************************************
+*****************************************************/
+/* -----------------------------------------
+	Hero Banner CSS
+----------------------------------------- */
+
+.hero-banner{
+    &.hero-banner-2{
+        padding-top: 310px;
+        padding-bottom: 190px;
+
+        .swiper-slide{
+            .bg-img{
+                transition: all 10s linear;
+            }
+
+            .banner-content {
+                opacity: 0;
+            }
+
+            &.swiper-slide-active {
+                .bg-img {
+                    transform: scale(1.4);
+                }
+                .banner-content {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

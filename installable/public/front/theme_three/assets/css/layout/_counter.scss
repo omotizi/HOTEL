@@ -1,0 +1,23 @@
+/* -----------------------------------------
+    Category CSS
+----------------------------------------- */
+.counter-area {
+    position: relative;
+    .card {
+        background: transparent;
+        &-icon{
+            font-size: 60px;
+            line-height: 1;
+        }
+    }
+}
+.counter-2 {
+    z-index: 5;
+    margin-top: -150px;
+
+    .wrapper{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+}

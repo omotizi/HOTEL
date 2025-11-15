@@ -1,0 +1,56 @@
+/* -----------------------------------------
+	Header 1 CSS
+----------------------------------------- */
+.header-area.header-1 {
+  background-color: var(--color-white);
+}
+.header-area.header-1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc((100vw - 960px) / 2);
+  background-color: var(--color-primary);
+  z-index: -1;
+}
+.header-area.header-1::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 0.5rem);
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  transform: translateY(-50%);
+  z-index: -2;
+}
+.header-area.header-1 .navbar-nav {
+  margin: 0;
+}
+.header-area.header-1 .main-navbar .nav-item:not(.menu-dropdown .nav-item):first-child {
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+}
+.header-area.header-1 .main-navbar .nav-item:not(.menu-dropdown .nav-item):first-child > .nav-link {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.header-area.header-1 .main-navbar .nav-item:not(.menu-dropdown .nav-item) > .nav-link {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.header-area.header-1 .header-top,
+.header-area.header-1 .header-bottom {
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
+}
+.header-area.header-1.is-sticky::after {
+  display: none;
+}
+.header-area.header-1.is-sticky .header-top {
+  display: none;
+}
+.header-area.header-1.is-sticky .social-link {
+  --bg: var(--color-primary);
+}/*# sourceMappingURL=header-1.css.map */

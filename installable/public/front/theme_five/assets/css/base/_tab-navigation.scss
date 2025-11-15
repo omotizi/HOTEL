@@ -1,0 +1,108 @@
+/* -----------------------------------------
+    Nav Tabs CSS
+----------------------------------------- */
+.tabs-navigation {
+    .nav {
+        display: inline-flex;
+        border: none;
+        gap: 20px;
+        justify-content: center;
+        
+        .nav-link {
+            color: var(--color-dark);
+            font-weight: var(--font-medium);
+            margin: 0;
+            z-index: 999;
+            border: 0;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+
+            &:is(.active){
+                color: var(--color-white);
+                background-color: var(--color-primary);
+                border-radius: 0;
+            }
+        }
+        
+        &[data-hover="fancyHover"] {
+            .nav-link:is(.active, :hover){
+                color: var(--color-dark);
+                background: transparent !important;
+                border-color: var(--color-primary);
+            }
+            .nav-item{
+                &:is(.active) {
+                    .nav-link{
+                        color: var(--color-white);
+                        background-color: var(--color-primary) !important;
+                        box-shadow: 0 10px 30px -7px rgba($color: var(--color-primary-rgb), $alpha: .5);
+                        &:is(:hover){
+                            background: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .target {
+        position: absolute;
+        background-color: var(--color-primary);
+        z-index: -1;
+        transition: all .3s;
+    }
+}
+
+.tabs-navigation-2 {
+    .nav {
+        display: inline-flex;
+        padding: 10px;
+        background-color: rgba(var(--color-primary-rgb), 0.13);
+
+        .nav-link{
+            color: var(--color-dark);
+            background: transparent;
+            padding: 12px 35px;
+            margin: 0;
+
+            &:hover{
+                box-shadow: none !important;
+            }
+        }
+
+        &[data-hover="fancyHover"] {
+            .nav-link:is(.active){
+                background: transparent !important;
+            }
+        }
+    }
+}
+.tabs-navigation-3 {
+    border-radius: 10px 10px 0 0;
+    .nav {
+        display: inline-flex;
+
+        .nav-link{
+            color: var(--color-dark);
+            background: transparent;
+            padding: 12px 35px;
+            margin: 0;
+            border-radius: 10px 10px 0 0 !important;
+
+            &:hover{
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+.tab-pane.fade {
+    transition: all 0.3s;
+    transform: translateY(.5rem);
+}
+.tab-pane.fade.show {
+    transform: translateY(0rem);
+}
+
+.tab-pane.slide.show {
+    animation: slideUp 1 .4s;
+}

@@ -1,0 +1,22 @@
+/* -----------------------------------------
+	Header 2 CSS
+----------------------------------------- */
+.header-area.header-2:not(.is-sticky) :is(.header-top li a) {
+  color: var(--color-white);
+}
+.header-area.header-2 .social-link {
+  --bg: rgba(var(--color-white-rgb), .2);
+}
+.header-area.header-2 .social-link a {
+  background-color: var(--bg);
+}
+.header-area.header-2 .social-link a:hover {
+  color: var(--color-primary);
+}
+.header-area.header-2.is-sticky .header-top {
+  display: none;
+}
+.header-area.header-2.is-sticky .header-bottom {
+  padding-inline: 0 !important;
+  background-color: transparent !important;
+}/*# sourceMappingURL=header-2.css.map */

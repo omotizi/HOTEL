@@ -1,0 +1,84 @@
+/* -----------------------------------------
+    Testimonial CSS
+----------------------------------------- */
+.testimonial-area{
+    position: relative;
+    overflow: hidden;
+    .slider-item {
+        position: relative;
+        background: var(--color-white);
+        border: 1px solid var(--border-color);
+        transition: all .4s;
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: -15px;
+            left: 0;
+            right: 0;
+            height: calc(100% / 3);
+            background-color: var(--color-primary);
+            border-radius: var(--radius-md);
+            z-index: -1;
+        }
+        
+        .client{
+            @include make-flex(center, start);
+            gap: 15px;
+            border-bottom: 1px dashed var(--border-color);
+
+            .client-img{
+                max-width: 70px;
+                padding-inline-end: 15px;
+                border-inline-end: 2px solid var(--color-primary);
+            }
+        }
+        .quote {
+            position: relative;
+
+            .icon{
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                font-size: 62px;
+                line-height: 1;
+                color: rgba($color: var(--color-primary-rgb), $alpha: .10);
+            }
+        }
+
+        p{
+            margin-bottom: 0;
+        }
+    }
+    
+    .swiper-slide:hover, .swiper-slide-active{
+        .slider-item{
+            border-color: rgba(76, 87, 125, 0.05);
+            box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.11);
+        }
+    }
+
+    $colors: (
+        "1" #B497D4,
+        "2" #C0E4F4,
+        "3" #FCCFDA,
+        "4" #FBE8C1,
+        "5" #499C21,
+        "6" #F1C40F,
+        "7" #E67E22,
+        "8" #E74C3C,
+        "9" #FFAA85,
+        "10" #3C8CE7
+    );
+
+    @each $i, $color in $colors {
+        .swiper-slide:nth-child(#{$i}) {
+            .slider-item::before{
+                background-color: $color;
+            }
+            .client-img{
+                border-color: $color;
+            }
+        }
+    }
+}
